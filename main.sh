@@ -90,6 +90,8 @@ fi
 export HOMEBREW_NO_AUTO_UPDATE=1
 # mas
 installfunc mas brew install mas
+# mas signin with share account 
+mas signin mas@lctech.com.tw "mypassword"
 # xcode
 installfunc Xcode mas install 497799835
 # HTTPBot
