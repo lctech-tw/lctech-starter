@@ -37,10 +37,7 @@ Support:
 + back-end utll
   + database
     + postgresql@11  
-  + database tool
-    + navicat(待討論)
 + front-end util
-  + zeplin
   + node 10/12
   + mvm
 
