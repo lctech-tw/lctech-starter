@@ -2,6 +2,10 @@
 
 lctech - 安裝環境懶人包
 
+## req
+
+### mail@lctech.com.tw
+
 ## Mac host
 
 Support:
@@ -63,4 +67,11 @@ mas need account
 
 ```sh
 bash main.sh
+```
+
+## docker
+
+``` sh
+docker run -itd -v /Users/lctech-zeki/Documents/GitHub/lctech-starter/docker_root:/mac --name wksp wksp
+docker exec -it wksp bash 
 ```

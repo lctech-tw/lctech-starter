@@ -77,21 +77,28 @@ if [ "$FLAG" = "-d" ] || [ "$FLAG" = "--dry-run" ]; then
     echo -e "$PURPLE > DRY_MODE $STD"
 fi
 
-# init
+# init and save 
+if [ -f ./.starter-config ];then
+STARTER_CONFIG=$(cat ./.starter-config)
+GITACCOUNT=${STARTER_CONFIG%,*} 
+GITPAT=${STARTER_CONFIG##*,} 
+else
 read -rp "  ➡️ Git Account: " GITACCOUNT
 read -rp "  ➡️ Git PAT: " GITPAT
+echo "$GITACCOUNT,$GITPAT" > ./.starter-config 
+fi
 
 # homebrew
 installfunc brew /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 # homebrew/cask
 if ! brew tap | grep -q "homebrew/cask" ; then
-brew tap caskroom/cask
+brew tap homebrew/cask
 fi
 export HOMEBREW_NO_AUTO_UPDATE=1
 # mas
 installfunc mas brew install mas
 # mas signin with share account 
-mas signin mas@lctech.com.tw "mypassword"
+# mas signin mas@lctech.com.tw "mypassword"
 # xcode
 installfunc Xcode mas install 497799835
 # HTTPBot
