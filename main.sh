@@ -114,7 +114,7 @@ installfunc Slack brew cask install slack
 # notion
 installfunc Notion brew install --cask notion
 # GCP SDK
-installfunc google-cloud-sdk google-chrome brew install google-cloud-sdk
+installfunc google-cloud-sdk brew install google-cloud-sdk
 # tableplus
 installfunc tableplus brew install --cask tableplus
 # zeplin
