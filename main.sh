@@ -60,7 +60,7 @@ cat >&2 <<EOF
  Usage: 
   $(basename "${BASH_SOURCE[0]}") [--dry-run] [--version]
  Description:
-  lctech - 安裝工作環境相關程式
+  util - 安裝工作環境相關程式
            請先確認 mail 及 Git 權限
  Command:
   -d,--dry-run   不安裝模式

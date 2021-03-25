@@ -1,6 +1,6 @@
-# LCTECH-STARTER
-
-lctech - 安裝環境懶人包
+# util-starter
+ 
+安裝環境懶人包
 
 ## req
 
@@ -58,7 +58,7 @@ mas need account
     + Xcode / HTTPBot / LINE / Trello
     + logout
   + [ ] mis  Account 自動化？
-    + lctech mail
+    + mail
     + apple
     + github
   + [x]  VPN
@@ -67,11 +67,4 @@ mas need account
 
 ```sh
 bash main.sh
-```
-
-## docker
-
-``` sh
-docker run -itd -v /Users/lctech-zeki/Documents/GitHub/lctech-starter/docker_root:/mac --name wksp wksp
-docker exec -it wksp bash 
 ```
