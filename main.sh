@@ -88,8 +88,32 @@ read -rp "  ➡️ Git PAT: " GITPAT
 echo "$GITACCOUNT,$GITPAT" > ./.starter-config 
 fi
 
+if sysctl machdep.cpu | grep -q Apple 
+then
+    CPU="Apple"
+    echo "CPU -> Apple"
+else
+    CPU="Intel"  
+    echo "CPU -> Intel"
+fi
+
+# open App store
+open /System/Applications/App\ Store.app 
 # homebrew
+# switch CPU
+if [ "$CPU" = "Apple" ];then
+cd /opt 
+sudo mkdir homebrew 
+installfunccd brew /bin/bash -c "$(curl -L https://github.com/Homebrew/brew/tarball/master | tar xz --strip 1 -C homebrew && path=('/opt/homebrew/bin' $path) && export PATH)"
+cd -
+else
 installfunc brew /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+fi
+# set brew
+if [ ! -f ~/.zprofile ]; then
+echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> ~/.zprofile
+eval "$(/opt/homebrew/bin/brew shellenv)"
+fi
 # homebrew/cask
 if ! brew tap | grep -q "homebrew/cask" ; then
 brew tap homebrew/cask
@@ -108,9 +132,11 @@ installfunc LINE mas install 539883307
 # Trello
 installfunc Trello mas install 1278508951
 # Docker
-installfunc docker brew cask install docker
+if [ "$CPU" = "Intel" ];then
+installfunc docker brew --cask install docker
+fi
 # Slack
-installfunc Slack brew cask install slack
+installfunc Slack brew --cask install slack
 # notion
 installfunc Notion brew install --cask notion
 # GCP SDK
@@ -164,15 +190,13 @@ fi
 succ 🆗 migrate .npmrc is OK
 
 # vscode https://code.visualstudio.com/download
-installfunc vscode wget https://vscode.cdn.azure.cn/stable/e5a624b788d92b8d34d1392e4c4d9789406efe8f/VSCode-darwin-stable.zip
-if [ -f ./VSCode-darwin-stable.zip ]; then
-    open  ./VSCode-darwin-stable.zip
-    cp -rf ./Visual Studio Code.app /Application
-fi
+installfunc wget brew install wget
+installfunc visual-studio-code brew install visual-studio-code
 
 # google-chrome
 installfunc google-chrome brew install google-chrome
 # google-chrome grpc util
+sleep 3
 cd ~/Library/Application\ Support/
 DIR="Google/Chrome/Default/Extensions/ddamlpimmiapbcopeoifjfmoabdbfbjj/"
 [ -d "${DIR}" ] || open -a "Google Chrome" https://chrome.google.com/webstore/detail/grpc-web-developer-tools/ddamlpimmiapbcopeoifjfmoabdbfbjj\?utm_source\=chrome-ntp-icon &
