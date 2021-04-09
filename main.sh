@@ -147,6 +147,9 @@ installfunc tableplus brew install --cask tableplus
 installfunc zeplin brew install --cask zeplin
 # outline
 installfunc outline mas install 1356178125
+# gcsfuse / osxfuse
+brew install --cask osxfuse
+brew install gcsfuse
 
 # .netrc
 bold Set you .netrc file
