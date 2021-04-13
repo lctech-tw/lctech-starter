@@ -66,5 +66,5 @@ mas need account
 ## Install & Use
 
 ```sh
-bash main.sh
+zsh main.sh
 ```

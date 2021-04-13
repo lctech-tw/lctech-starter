@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/usr/bin/env zsh
 set -eo pipefail
 # ----------------------------------
 # APP_Purpose="install default app for lctech"
@@ -103,8 +103,8 @@ open /System/Applications/App\ Store.app
 # switch CPU
 if [ "$CPU" = "Apple" ];then
 cd /opt 
-sudo mkdir homebrew 
-installfunccd brew /bin/bash -c "$(curl -L https://github.com/Homebrew/brew/tarball/master | tar xz --strip 1 -C homebrew && path=('/opt/homebrew/bin' $path) && export PATH)"
+sudo mkdir -p homebrew 
+installfunc brew /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 cd -
 else
 installfunc brew /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
@@ -133,23 +133,23 @@ installfunc LINE mas install 539883307
 installfunc Trello mas install 1278508951
 # Docker
 if [ "$CPU" = "Intel" ];then
-installfunc docker brew --cask install docker
+installfunc docker brew install --cask  docker
 fi
 # Slack
-installfunc Slack brew --cask install slack
+installfunc Slack brew install --cask slack
 # notion
 installfunc Notion brew install --cask notion
 # GCP SDK
 installfunc google-cloud-sdk brew install google-cloud-sdk
+source "$(brew --prefix)/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc"
+source "$(brew --prefix)/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc"
 # tableplus
 installfunc tableplus brew install --cask tableplus
 # zeplin
 installfunc zeplin brew install --cask zeplin
 # outline
 installfunc outline mas install 1356178125
-# gcsfuse / osxfuse
-brew install --cask osxfuse
-brew install gcsfuse
+
 
 # .netrc
 bold Set you .netrc file
@@ -203,6 +203,11 @@ sleep 3
 cd ~/Library/Application\ Support/
 DIR="Google/Chrome/Default/Extensions/ddamlpimmiapbcopeoifjfmoabdbfbjj/"
 [ -d "${DIR}" ] || open -a "Google Chrome" https://chrome.google.com/webstore/detail/grpc-web-developer-tools/ddamlpimmiapbcopeoifjfmoabdbfbjj\?utm_source\=chrome-ntp-icon &
+
+# gcsfuse / osxfuse
+brew install --cask osxfuse
+# M1 has errorrrrr!
+# brew install gcsfuse
 
 succ "🚀 MAC Install is done ."
 exit 0
