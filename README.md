@@ -6,6 +6,12 @@
 
 ### mail@lctech.com.tw
 
+## How to use
+
+```
+bash ./main.sh
+```
+
 ## Mac host
 
 Support:
@@ -62,9 +68,3 @@ mas need account
     + apple
     + github
   + [x]  VPN
-
-## Install & Use
-
-```sh
-zsh main.sh
-```
