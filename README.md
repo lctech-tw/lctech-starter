@@ -1,4 +1,7 @@
 # util-starter
+
+![Lctech](https://img.shields.io/badge/LCTECH-%23000000.svg?style=for-the-badge&logo=supabase&logoColor=FFDF6C)
+![Shell Script](https://img.shields.io/badge/shell_script-%23121011.svg?style=for-the-badge&logo=gnu-bash&logoColor=white)
  
 安裝環境懶人包
 
