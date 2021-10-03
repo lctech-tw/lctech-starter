@@ -1,10 +1,17 @@
 # util-starter
- 
-安裝環境懶人包
 
-## req
+快速安裝開發環境
 
-### mail@lctech.com.tw
+## Use
+
+```sh
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/lctech-tw/util_starter/main/main.sh)
+```
+
+## Req
+
++ Lctech's account
++ Apple's account
 
 ## Mac host
 
@@ -45,25 +52,7 @@ Support:
   + node 10/12
   + mvm
 
-## TODO
-
-mas need account
-
----
-
-+ [ ]  docker workspace
-+ [ ]  其他＆意外問題
-  + [ ]  Apply for apple account
-    + install mac App store need apple account
-    + Xcode / HTTPBot / LINE / Trello
-    + logout
-  + [ ] mis  Account 自動化？
-    + mail
-    + apple
-    + github
-  + [x]  VPN
-
-## Install & Use
+## Install
 
 ```sh
 zsh main.sh

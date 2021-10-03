@@ -1,4 +1,4 @@
-#!/usr/bin/env zsh
+#!/bin/bash
 set -eo pipefail
 # ----------------------------------
 # APP_Purpose="install default app for lctech"
@@ -132,9 +132,7 @@ installfunc LINE mas install 539883307
 # Trello
 installfunc Trello mas install 1278508951
 # Docker
-if [ "$CPU" = "Intel" ];then
 installfunc docker brew install --cask  docker
-fi
 # Slack
 installfunc Slack brew install --cask slack
 # notion
@@ -149,7 +147,6 @@ installfunc tableplus brew install --cask tableplus
 installfunc zeplin brew install --cask zeplin
 # outline
 installfunc outline mas install 1356178125
-
 
 # .netrc
 bold Set you .netrc file
@@ -205,7 +202,7 @@ DIR="Google/Chrome/Default/Extensions/ddamlpimmiapbcopeoifjfmoabdbfbjj/"
 [ -d "${DIR}" ] || open -a "Google Chrome" https://chrome.google.com/webstore/detail/grpc-web-developer-tools/ddamlpimmiapbcopeoifjfmoabdbfbjj\?utm_source\=chrome-ntp-icon &
 
 # gcsfuse / osxfuse
-brew install --cask osxfuse
+# brew install --cask osxfuse
 # M1 has errorrrrr!
 # brew install gcsfuse
 
