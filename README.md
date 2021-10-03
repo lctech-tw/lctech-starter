@@ -61,28 +61,8 @@ Support:
   + node 10/12
   + mvm
 
-<<<<<<< HEAD
 ## Install
 
 ```sh
 zsh main.sh
 ```
-=======
-## TODO
-
-mas need account
-
----
-
-+ [ ]  docker workspace
-+ [ ]  其他＆意外問題
-  + [ ]  Apply for apple account
-    + install mac App store need apple account
-    + Xcode / HTTPBot / LINE / Trello
-    + logout
-  + [ ] mis  Account 自動化？
-    + mail
-    + apple
-    + github
-  + [x]  VPN
->>>>>>> d56962be5f443a5d5ee89631999b8b40a81d54cb
