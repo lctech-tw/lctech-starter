@@ -1,5 +1,8 @@
 # util-starter
 
+![Lctech](https://img.shields.io/badge/LCTECH-%23000000.svg?style=for-the-badge&logo=supabase&logoColor=FFDF6C)
+![Shell Script](https://img.shields.io/badge/shell_script-%23121011.svg?style=for-the-badge&logo=gnu-bash&logoColor=white)
+
 快速安裝開發環境
 
 ## Use
@@ -12,6 +15,12 @@
 
 + Lctech's account
 + Apple's account
+
+## How to use
+
+```
+bash ./main.sh
+```
 
 ## Mac host
 
@@ -52,8 +61,28 @@ Support:
   + node 10/12
   + mvm
 
+<<<<<<< HEAD
 ## Install
 
 ```sh
 zsh main.sh
 ```
+=======
+## TODO
+
+mas need account
+
+---
+
++ [ ]  docker workspace
++ [ ]  其他＆意外問題
+  + [ ]  Apply for apple account
+    + install mac App store need apple account
+    + Xcode / HTTPBot / LINE / Trello
+    + logout
+  + [ ] mis  Account 自動化？
+    + mail
+    + apple
+    + github
+  + [x]  VPN
+>>>>>>> d56962be5f443a5d5ee89631999b8b40a81d54cb
