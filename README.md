@@ -5,7 +5,7 @@
 
 快速安裝開發環境
 
-## Use
+## Quickuse
 
 ```sh
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/lctech-tw/util_starter/main/main.sh)
@@ -18,7 +18,7 @@
 
 ## How to use
 
-```
+```sh
 bash ./main.sh
 ```
 
@@ -60,9 +60,3 @@ Support:
 + front-end util
   + node 10/12
   + mvm
-
-## Install
-
-```sh
-zsh main.sh
-```
